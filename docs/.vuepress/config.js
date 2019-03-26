@@ -22,7 +22,7 @@ module.exports = {
   },
   host: "localhost",
   port: 8881,
-    theme: "reco",
+  theme: "waiyuanneifang",
   base: "/dxBlog/", // 这是部署到github相关的配置,css等需要根据这个地址来查找css资源
   markdown: {
     lineNumbers: true // 代码块是否显示行号
