@@ -1,7 +1,8 @@
 const path = require("path")
 module.exports = {
-	title: "个人博客",
-	description: "种一颗树最好的时机是十年前，其次是现在",
+	title: "Paocaijun",
+	description: "蓁蓁其叶，灼灼其华",
+
 	head: [
 		// 注入到当前页面的 HTML <head> 中的标签
 		["link", { rel: "icon", href: "/imgs/cow.jpg" }], // 增加一个自定义的 favicon(网页标签的图标)
@@ -26,10 +27,23 @@ module.exports = {
 	markdown: {
 		lineNumbers: true // 代码块是否显示行号
 	},
+	theme: "reco",
 	themeConfig: {
+		logo: "/imgs/cow.jpg",
 		nav: [
 			// 导航栏配置
-			{ text: "前端基础", link: "/accumulate/1.html" },
+			{
+				text: "前端基础",
+				link: "/accumulate/1.html",
+				items: [
+					{ text: "flex布局", link: "/accumulate/1.html" },
+					{ text: "2", link: "/accumulate/2.html" },
+					{
+						text: "三栏布局",
+						link: "/accumulate/gridLayout.html"
+					}
+				]
+			},
 			{ text: "javascript", link: "/javascript/" }, // 以/结尾的匹配README.md文件
 			{ text: "也聊人生", link: "/littleTalk/" },
 			{
@@ -45,7 +59,7 @@ module.exports = {
 			"/accumulate/": [
 				{
 					title: "前端基础",
-					children: ["/accumulate/1.html"]
+					children: ["/accumulate/1.html", "/accumulate/2.html"] //左侧导航显示md文件的title
 				}
 			],
 			"/javascript/": [

@@ -32,3 +32,8 @@ export default {
   },
 }
 </script>
+<style lang="css">
+.vctrl {
+  /* display: none; */
+}
+</style>
