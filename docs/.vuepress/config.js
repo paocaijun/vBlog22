@@ -2,7 +2,6 @@ const path = require("path")
 module.exports = {
 	title: "Paocaijun",
 	description: "蓁蓁其叶，灼灼其华",
-
 	head: [
 		// 注入到当前页面的 HTML <head> 中的标签
 		["link", { rel: "icon", href: "/imgs/cow.jpg" }], // 增加一个自定义的 favicon(网页标签的图标)
@@ -27,7 +26,7 @@ module.exports = {
 	markdown: {
 		lineNumbers: true // 代码块是否显示行号
 	},
-	theme: "reco",
+	theme: "paocaijun",
 	themeConfig: {
 		logo: "/imgs/cow.jpg",
 		nav: [
@@ -53,30 +52,30 @@ module.exports = {
 					{ text: "backEnd", link: "/categories/backEnd" }
 				]
 			}
-		],
-		sidebar: {
-			// 侧边栏配置
-			"/accumulate/": [
-				{
-					title: "前端基础",
-					children: ["/accumulate/1.html", "/accumulate/2.html"] //左侧导航显示md文件的title
-				}
-			],
-			"/javascript/": [
-				{
-					title: "javascript",
-					children: ["/javascript/"]
-				}
-			],
-			"/littleTalk/": [
-				"/littleTalk/",
-				{
-					title: "也聊人生",
-					children: ["/littleTalk/"]
-				}
-			]
-		},
+		]
+		// sidebar: {
+		// 	// 侧边栏配置
+		// 	"/accumulate/": [
+		// 		{
+		// 			title: "前端基础",
+		// 			children: ["/accumulate/1.html", "/accumulate/2.html"] //左侧导航显示md文件的title
+		// 		}
+		// 	],
+		// 	"/javascript/": [
+		// 		{
+		// 			title: "javascript",
+		// 			children: ["/javascript/"]
+		// 		}
+		// 	],
+		// 	"/littleTalk/": [
+		// 		"/littleTalk/",
+		// 		{
+		// 			title: "也聊人生",
+		// 			children: ["/littleTalk/"]
+		// 		}
+		// 	]
+		// },
 		// sidebar: "auto", // 侧边栏配置 ，开启时，左侧不显示层级
-		sidebarDepth: 2 // 侧边栏显示2级
+		// sidebarDepth: 2 // 侧边栏显示2级
 	}
 }
