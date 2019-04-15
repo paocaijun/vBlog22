@@ -158,3 +158,23 @@ tags: css
 表格布局的历史一言难尽，但是在这里用于三栏布局还是很实用的，兼容性也很好，弹性布局不兼容的时候可以考虑表格布局。
 
 弹性布局，表格布局有个相同之处是：当中间栏高度超出时，三栏高度会同步改变，有时候我们并不想要这样的效果。
+
+#### 5、网格布局
+
+```
+<section>
+    <style>
+        .grid-layout {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 300px auto 300px; /* 设置列数及每列的宽度 */
+            grid-template-rows:100px
+        }
+    </style>
+    <article class="grid-layout">
+        <div class="in">1</div>
+        <div class="in">2</div>
+        <div class="in">3</div>
+    </article>
+</section>
+```

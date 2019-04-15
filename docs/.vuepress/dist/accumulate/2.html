@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>css的引入方式共三种及@import和link的区别 | Paocaijun</title>
+    <meta name="description" content="蓁蓁其叶，灼灼其华">
+    <link rel="icon" href="/dxBlog/imgs/cow.jpg">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/dxBlog/assets/css/0.styles.316f4168.css" as="style"><link rel="preload" href="/dxBlog/assets/js/app.666414ad.js" as="script"><link rel="preload" href="/dxBlog/assets/js/8.b7dce0d9.js" as="script"><link rel="prefetch" href="/dxBlog/assets/js/10.2ab663c1.js"><link rel="prefetch" href="/dxBlog/assets/js/11.546cee43.js"><link rel="prefetch" href="/dxBlog/assets/js/12.a342dc3c.js"><link rel="prefetch" href="/dxBlog/assets/js/13.051aa09e.js"><link rel="prefetch" href="/dxBlog/assets/js/3.cd224f8f.js"><link rel="prefetch" href="/dxBlog/assets/js/4.1fadb1ba.js"><link rel="prefetch" href="/dxBlog/assets/js/5.fd982b73.js"><link rel="prefetch" href="/dxBlog/assets/js/6.30fe9f82.js"><link rel="prefetch" href="/dxBlog/assets/js/7.adfdece8.js"><link rel="prefetch" href="/dxBlog/assets/js/9.182cb296.js"><link rel="prefetch" href="/dxBlog/assets/js/vendors~docsearch.c9d4a337.js">
+    <link rel="stylesheet" href="/dxBlog/assets/css/0.styles.316f4168.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header id="navbarWrapper" class="navbar"><div class="header-center"><div class="sidebar-button"><i class="iconfont reco-menu"></i></div> <div class="links" style="max-width:nullpx;"><a href="/dxBlog/" class="home-link router-link-active"><img src="/dxBlog/imgs/cow.jpg" alt="Paocaijun" class="logo"> <span class="site-name">Home</span></a> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      前端基础
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dxBlog/accumulate/1.html" class="nav-link">
+  flex布局
+</a></li><li class="dropdown-item"><!----> <a href="/dxBlog/accumulate/2.html" class="nav-link router-link-exact-active router-link-active">
+  2
+</a></li><li class="dropdown-item"><!----> <a href="/dxBlog/accumulate/gridLayout.html" class="nav-link">
+  三栏布局
+</a></li></ul></div></div><div class="nav-item"><a href="/dxBlog/javascript/" class="nav-link">
+  javascript
+</a></div><div class="nav-item"><a href="/dxBlog/littleTalk/" class="nav-link">
+  也聊人生
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont undefined"></i>
+      categories
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/dxBlog/categories/frontEnd.html" class="nav-link">
+  frontEnd
+</a></li><li class="dropdown-item"><!----> <a href="/dxBlog/categories/backEnd.html" class="nav-link">
+  backEnd
+</a></li></ul></div></div> <!----></nav> <div class="side-search-wrapper"><div class="search-box" data-v-38768356><input aria-label="Search" autocomplete="off" spellcheck="false" value="" data-v-38768356> <i class="iconfont reco-search" data-v-38768356></i> <!----></div></div></div></div></header> <div class="sidebar-mask"></div> <div class="main-page"><div class="page" data-v-0c45c6ac> <div class="page-title" data-v-0c45c6ac><h1 data-v-0c45c6ac>css的引入方式共三种及@import和link的区别</h1> <hr data-v-0c45c6ac> <div data-v-a8deb850 data-v-0c45c6ac><i class="iconfont reco-account" data-v-a8deb850><span data-v-a8deb850>Paocaijun</span></i> <i class="iconfont reco-date" data-v-a8deb850><span data-v-a8deb850>2018-4-10</span></i> <!----> <i class="iconfont reco-tag tags" data-v-a8deb850><span class="tag-item" data-v-a8deb850>
+      c
+    </span><span class="tag-item" data-v-a8deb850>
+      s
+    </span><span class="tag-item" data-v-a8deb850>
+      s
+    </span></i></div></div> <div class="content" data-v-0c45c6ac><p>css 的引入方式共三种及@import 和 link 的区别</p> <h4 id="一、-行内样式"><a href="#一、-行内样式" aria-hidden="true" class="header-anchor">#</a> 一、 行内样式</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;p style=&quot;color: red&quot;&gt;test&lt;/p&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>优点：简单、优先级高。<br></li> <li>缺点：页面不纯净、文件体积大、不易维护</li></ul> <h4 id="二、-内嵌样式"><a href="#二、-内嵌样式" aria-hidden="true" class="header-anchor">#</a> 二、 内嵌样式</h4> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;html&gt;
+    &lt;style&gt;
+        p {color: red;}
+    &lt;/style&gt;
+&lt;/html&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ul><li>优点：文件少、css 代码少时适用</li> <li>缺点：每个页面需要重复定义，工程大时不利于复用和维护</li></ul> <h4 id="三、-外联样式"><a href="#三、-外联样式" aria-hidden="true" class="header-anchor">#</a> 三、 外联样式</h4> <p>外联样式又分为<br></p> <h6 id="_1-链接样式-link"><a href="#_1-链接样式-link" aria-hidden="true" class="header-anchor">#</a> 1. 链接样式 link</h6> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot; /&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><ul><li>实现了 html 框架和 css 样式分离，复用率提高，后期维护方便</li></ul> <h6 id="_2-导入样式-import"><a href="#_2-导入样式-import" aria-hidden="true" class="header-anchor">#</a> 2. 导入样式@import</h6> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;style type=&quot;test/css&quot;&gt;
+    @import (keyword) url(style.css)
+    @import (keyword) url(&quot;style.css&quot;)
+    @import (keyword) &quot;style.css&quot;
+    //三种方式结果相同，不使用url()时，必须带引号
+    //keyword=less/css 将文件视为less/css，无论扩展名是什么
+&lt;/style&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h4 id="四、-import-和-link-的区别"><a href="#四、-import-和-link-的区别" aria-hidden="true" class="header-anchor">#</a> 四、@import 和 link 的区别</h4> <ul><li>link 属于 XHTML 标签，@import 属于 css 标签。</li> <li>link 是异步加载，与页面加载同时进行；@import 是串行加载，在页面加载完成后被加载，因此会有页面闪烁。</li> <li>link 属于 XHTML，因此兼容性较好；@import 是 css2.1 提出的，浏览器兼容性差。</li> <li>link 只是 JavaScript 控制 DOM 改变样式，而@import 不支持</li></ul></div> <!----> <!----> <div class="page-edit" data-v-0c45c6ac><!----> <!----></div> <!----> </div></div> <div class="valine-wrapper" data-v-fb2b48da><div id="valine" style="display:;" data-v-fb2b48da></div></div> <!----> <!----> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-602fdb38 data-v-602fdb38><i class="iconfont reco-up" data-v-602fdb38></i></div></div></div>
+    <script src="/dxBlog/assets/js/app.666414ad.js" defer></script><script src="/dxBlog/assets/js/8.b7dce0d9.js" defer></script>
+  </body>
+</html>

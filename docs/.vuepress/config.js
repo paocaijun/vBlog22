@@ -43,7 +43,10 @@ module.exports = {
 					}
 				]
 			},
-			{ text: "javascript", link: "/javascript/" }, // 以/结尾的匹配README.md文件
+			{
+				text: "javascript",
+				items: [{ text: "原型", link: "/javascript/proto.html" }]
+			}, // 以/结尾的匹配README.md文件
 			{ text: "也聊人生", link: "/littleTalk/" },
 			{
 				text: "categories",
