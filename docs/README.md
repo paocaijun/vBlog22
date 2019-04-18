@@ -21,6 +21,8 @@ ANS:1、vuepress 必须是 v1 以上的, npm install -g vuepress@next.不加@nex
 
 3、对默认主题的简单覆盖。建立.vuepress/override.styl 文件（stylus）,以下变量可以调整
 
+4、打包后将 docs/.vuepress/dist 内的文件全部拷贝推送到 github
+
 $accentColor = #3eaf7c
 $textColor = #2c3e50
 $borderColor = #eaecef

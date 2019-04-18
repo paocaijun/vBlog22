@@ -1,5 +1,6 @@
 ---
 title: 原型继承的方式
+date: 2019-03-18
 tags: javascript
 ---
 
