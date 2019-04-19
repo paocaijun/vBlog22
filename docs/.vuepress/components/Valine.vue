@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import config from '../config.js'
 export default {
   name: 'Valine',
   mounted: function () {
@@ -21,8 +22,8 @@ export default {
     }
     new Valine({
       el: '#vcomments',
-      appId: 'iouwTIVqxjN9UG79fxYMNQm1-gzGzoHsz',// your appId
-      appKey: 'HBmftNP6DQOlUIPsDr76aHuc', // your appKey
+      appId: config.themeConfig.valineConfig.appId,// your appId
+      appKey: config.themeConfig.valineConfig.appKey, // your appKey
       notify: false, //评论回复邮件提醒
       verify: false, //验证码
       avatar: 'monsterid', //头像配置

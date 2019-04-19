@@ -55,7 +55,11 @@ module.exports = {
 					{ text: "backEnd", link: "/categories/backEnd" }
 				]
 			}
-		]
+		],
+		valineConfig: {
+			appId: "pOCuQsOi6CGVMHAvulpWuI9J-gzGzoHsz", // your appId
+			appKey: "3G2N8pW6o1jKtVr75StStAtd" // your appKey
+		}
 		// sidebar: {
 		// 	// 侧边栏配置
 		// 	"/accumulate/": [
