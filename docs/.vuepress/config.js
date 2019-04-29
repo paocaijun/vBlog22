@@ -33,10 +33,9 @@ module.exports = {
 			// 导航栏配置
 			{
 				text: "前端基础",
-				link: "/accumulate/1.html",
+				link: "/accumulate/gridLayout.html",
 				items: [
-					{ text: "flex布局", link: "/accumulate/1.html" },
-					{ text: "2", link: "/accumulate/2.html" },
+					// { text: "flex布局", link: "/accumulate/1.html" },
 					{
 						text: "三栏布局",
 						link: "/accumulate/gridLayout.html"
@@ -45,16 +44,16 @@ module.exports = {
 			},
 			{
 				text: "javascript",
-				items: [{ text: "原型", link: "/javascript/proto.html" }]
-			}, // 以/结尾的匹配README.md文件
-			{ text: "也聊人生", link: "/littleTalk/" },
-			{
-				text: "categories",
 				items: [
-					{ text: "frontEnd", link: "/categories/frontEnd" },
-					{ text: "backEnd", link: "/categories/backEnd" }
+					{ text: "原型", link: "/javascript/proto.html" },
+					{ text: "node系列1", link: "/javascript/node1.html" },
+					{
+						text: "node系列2",
+						link: "/javascript/node2.html"
+					}
 				]
-			}
+			}, // 以/结尾的匹配README.md文件
+			{ text: "也聊人生", link: "/littleTalk/" }
 		],
 		valineConfig: {
 			appId: "pOCuQsOi6CGVMHAvulpWuI9J-gzGzoHsz", // your appId

@@ -10,17 +10,17 @@ js 继承的方式分为：
 
 #### 1、原型链继承
 
-```
+```js
 function Animal(type) {
-    this.type = type
+	this.type = type
 }
 Animal.prototype.sayType = function() {
-    console.log(this.type)
+	console.log(this.type)
 }
 function Dog(color) {
-    this.color = color
+	this.color = color
 }
-Dog.prototype = new Animal('dog')
+Dog.prototype = new Animal("dog")
 let bobi = new Dog("blue")
 bobi.sayType() // dog
 ```
@@ -35,16 +35,16 @@ bobi.\_\_proto\_\_ = Dog.prototype
 
 2>引用类型数据被所有实例共有
 
-```
+```js
 function Animal() {
-    this.names=['a','b']
+	this.names = ["a", "b"]
 }
 function Dog(color) {}
 Dog.prototype = new Animal()
 let bobi = new Dog()
 let b2 = new Dog()
-bobi.names.push('c')
-console.log(bobi.names,b2.names) // [a,b,c]  [a,b,c]
+bobi.names.push("c")
+console.log(bobi.names, b2.names) // [a,b,c]  [a,b,c]
 ```
 
 重写子类的原型等于父类的一个实例，如果父类包含引用属性，所有子类会公用该属性
@@ -53,16 +53,16 @@ console.log(bobi.names,b2.names) // [a,b,c]  [a,b,c]
 
 通过 call()函数修改 this 指向，从而将父类属性挂载到子类实例中
 
-```
+```js
 function Animal(type) {
-    this.type = type
-    this.names = ["a", "b"]
+	this.type = type
+	this.names = ["a", "b"]
 }
 Animal.prototype.sayType = function() {
-    console.log(this.names)
+	console.log(this.names)
 }
 function Dog(type) {
-    Animal.call(this, type)
+	Animal.call(this, type)
 }
 let bobi = new Dog("dog")
 bobi.names.push("d")
@@ -86,7 +86,7 @@ bobi.sayType() // 报错 ,bobi.sayType is not a function
 
 原型链继承和经典继承双剑合璧，融合了两者的优点
 
-```
+```js
 unction Animal(type) {
     this.names = ["a", "b"]
 }
@@ -112,15 +112,15 @@ bobi.sayType()
 
 解决了两次调用的问题
 
-```
+```js
 function Animal(type) {
-    this.names = ["a", "b"]
+	this.names = ["a", "b"]
 }
 Animal.prototype.sayType = function() {
-    console.log("say", this.names)
+	console.log("say", this.names)
 }
 function Dog(type) {
-    Animal.call(this, type)
+	Animal.call(this, type)
 }
 // 重要的一步
 var F = function() {}

@@ -16,3 +16,7 @@ $textColor = #2c3e50
 $borderColor = #eaecef
 $codeBgColor = #282c34
 5、文件块的配置由 md 文件决定，比如时间、作者、访问量等
+
+markdown 语法
+<font color=Blue size=2>我是蓝色</font>
+代码块设置代码类型

@@ -20,7 +20,7 @@
 		"vuepress-theme-paocaijun": "^1.2.1",
 		"vuepress-theme-reco": "^0.2.1",
 		"vuepress-theme-waiyuanneifang": "0.0.4",
-		"vuepress-theme-yubisaki": "^3.1.0",
+		"vuepress-theme-yubisaki": "^3.1.9",
 		"webpack-dev-middleware": "3.6.0"
 	}
 }
